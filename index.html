@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Setting character encoding to UTF-8 -->
+		<meta charset="UTF-8" />
+		<!-- Setting the viewport to make the website responsive on mobile devices -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Linking an external CSS stylesheet -->
+		<link rel="stylesheet" href="Directories/style.css" />
+		<!-- Title of the webpage displayed in the browser tab -->
+		<title>Calendar</title>
+	</head>
+
+	<body>
+		<!-- Main section of the planner -->
+		<div class="planner">
+			<!-- Header title of the calendar -->
+			<h1>Event Calendar</h1>
+			<!-- Calendar container -->
+			<div id="calendar" class="calendar-grid"></div>
+		</div>
+
+		<!-- Button to add new tasks, which triggers the showAddTaskModal function -->
+		<button class="add-task-btn" onclick="showAddTaskModal()">Add Task</button>
+
+		<!-- Modal for adding new tasks -->
+		<div id="addTaskModal" class="modal">
+			<div class="modal-content">
+				<!-- Button to close the modal -->
+				<span class="close" onclick="closeAddTaskModal()">&times;</span>
+				<h2>Add Task</h2>
+				<!-- Field to select the task date -->
+				<input type="date" id="task-date" />
+				<!-- Field to enter the task description -->
+				<input
+					type="text"
+					id="task-desc"
+					placeholder="Task Description"
+					autocomplete="off"
+				/>
+				<!-- Button to add the task, which triggers the addTask function -->
+				<button onclick="addTask()">Add Task</button>
+			</div>
+		</div>
+
+		<!-- Linking an external JavaScript file -->
+		<script src="Directories/script.js"></script>
+	</body>
+</html>
